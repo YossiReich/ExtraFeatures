@@ -2,6 +2,7 @@ classdef TextParser
     % This class is resposible to parse and store all the data that is
     % given by the text files of the subject
     properties(Access = private)
+        CONSTS = Conststants();
         path
         data
     end

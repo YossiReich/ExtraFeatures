@@ -3,6 +3,7 @@ classdef Subject
     %   Detailed explanation goes here
     
     properties(Access = private)
+        CONSTS = Conststants();
         path
         textData
         statistics

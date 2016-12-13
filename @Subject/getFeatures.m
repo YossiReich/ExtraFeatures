@@ -2,15 +2,7 @@ function [ features ] = getFeatures(sub)
 % This method uses the subject video and data and returns the calculated
 % features
 
-NUM_OF_VIDEOS = 9;
-
-%% Check subject Exception
-excepVideo = 0;
-if sub.excep.getType() == 'videoRunner'
-    excepVideo = sub.excep.getVideoNum();
-    excep = sub.excep;
-    sub.excep = SubjectException();
-end
+NUM_OF_VIDEOS = sub.CONSTS.NUM_OF_VIDEOS;
 
 %% Run videos
 
@@ -22,10 +14,7 @@ for videoNum = 1:NUM_OF_VIDEOS
     
     % Get the video data
     videoData = sub.textData.getVideoData(videoNum);
-    videoData.excep = sub.excep;
-    if excepVideo == videoNum
-        videoData.excep = excep;
-    end
+    videoData.excep = sub.excep{videoNum};
     
     % Prepare statistic object for new video
     sub.statistics.start(videoData.numOfFrames);

@@ -1,7 +1,7 @@
 function [ data ] = parseFiles(tp)
 % This function parset a single text file and returnes a videoData object
 
-NUM_OF_VIDEOS = 9;
+NUM_OF_VIDEOS = tp.CONSTS.NUM_OF_VIDEOS;
 
 data = cell(1, NUM_OF_VIDEOS);
 
