@@ -1,9 +1,9 @@
-classdef videoData
+classdef VideoData
     % This class holds all the video data
     properties(Access = public)
         videoPath
         numOfFrames
-        framesRSPoints
+        videoRSPoints
         excep
     end
     
