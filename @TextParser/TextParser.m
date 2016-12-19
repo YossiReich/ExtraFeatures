@@ -11,7 +11,11 @@ classdef TextParser
         % Constructor
         function tp = TextParser(subjectPath)
             tp.path = subjectPath;
-            tp.data = tp.parseAllFiles(tp);
+            tp.data = tp.parseFiles();
+        end
+        % VideoData getter
+        function videoData = getVideoData(tp, videoNum)
+            videoData = tp.data{videoNum};
         end
     end
     

@@ -10,7 +10,7 @@ for videoNum = 1:NUM_OF_VIDEOS
     videoData = VideoData();
 
     % Create video path
-    videoData.videoPath = tp.findvideoFile(tp, videoNum);
+    videoData.videoPath = tp.findvideoFile(videoNum);
 
     % Parse the txt file
     fileName = fullfile(tp.path, [num2str(videoNum) '.txt']);
